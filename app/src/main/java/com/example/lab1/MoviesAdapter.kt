@@ -16,6 +16,7 @@ class MoviesAdapter(private val movieNames : ArrayList<String>,
                     private val movieCountries: ArrayList<String>,
                     private val movieRatings: ArrayList<String>,
                     private val movieImages: ArrayList<Int>,
+                    private val movieGenres: ArrayList<String>,
                     private val context: Context,
                     val onItemClick: ItemClick) : RecyclerView.Adapter<MoviesAdapter.ViewHolder>(){
 

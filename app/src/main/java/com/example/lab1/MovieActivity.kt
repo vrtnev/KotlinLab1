@@ -11,6 +11,11 @@ class MovieActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie)
+        movieImage.setImageResource(intent.getIntExtra("image", 0))
+        movieName.setText(intent.getStringExtra("name"))
+        movieCountry.setText(intent.getStringExtra("country"))
+        movieRating.setText(intent.getStringExtra("rating"))
+        movieGenre.setText(intent.getStringExtra("genre"))
     }
 
 }

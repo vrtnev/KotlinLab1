@@ -18,12 +18,14 @@ class MovieListActivity : AppCompatActivity(), ItemClick {
         val countryName = countryNames[pos]
         val rating = ratings[pos]
         val image = images[pos]
+        val genre = genres[pos]
 
         val intent = Intent(this, MovieActivity::class.java)
         intent.putExtra("name", movieName)
         intent.putExtra("country", countryName)
         intent.putExtra("rating", rating)
-        intent.putExtra(image)
+        intent.putExtra("image", image)
+        intent.putExtra("genre", genre)
         startActivity(intent)
     }
 
@@ -31,13 +33,14 @@ class MovieListActivity : AppCompatActivity(), ItemClick {
     val countryNames: ArrayList<String> = ArrayList()
     val ratings: ArrayList<String> = ArrayList()
     val images: ArrayList<Int> = ArrayList()
+    val genres: ArrayList<String> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_list)
         addMovies()
         moviesRecyclerView.layoutManager = LinearLayoutManager(this)
-        moviesRecyclerView.adapter = MoviesAdapter(movieNames, countryNames, ratings, images, this,this)
+        moviesRecyclerView.adapter = MoviesAdapter(movieNames, countryNames, ratings, images, genres, this,this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -111,6 +114,22 @@ class MovieListActivity : AppCompatActivity(), ItemClick {
         images.add(R.drawable.img14)
         images.add(R.drawable.img15)
         images.add(R.drawable.img16)
+        genres.add("Комедия")
+        genres.add("Трагикомедия")
+        genres.add("Комедия")
+        genres.add("Драма")
+        genres.add("Комедия")
+        genres.add("Комедия")
+        genres.add("Боевик")
+        genres.add("Комедия")
+        genres.add("Трагикомедия")
+        genres.add("Комедия")
+        genres.add("Комедия")
+        genres.add("Боевик")
+        genres.add("Комедия")
+        genres.add("Комедия")
+        genres.add("Драма")
+        genres.add("Драма")
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
