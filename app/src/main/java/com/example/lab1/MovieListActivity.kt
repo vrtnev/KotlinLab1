@@ -20,6 +20,27 @@ class MovieListActivity : AppCompatActivity(), ItemClick {
         val image = images[pos]
         val genre = genres[pos]
 
+        var films: ArrayList<Film> = ArrayList()
+
+        films.add(Film("Фильм 1", "Россия", "5", "Комедия", R.drawable.img1))
+        films.add(Film("Фильм 2", "Австралия", "5", "Комедия", R.drawable.img1))
+        films.add(Film("Фильм 3", "Иран", "5", "Трагикомедия", R.drawable.img1))
+        films.add(Film("Фильм 4", "США", "5", "Комедия", R.drawable.img1))
+        films.add(Film("Фильм 5", "Канада", "5", "Драма", R.drawable.img1))
+        films.add(Film("Фильм 6", "Россия", "5", "Комедия", R.drawable.img1))
+        films.add(Film("Фильм 7", "Россия", "4", "Боевик", R.drawable.img1))
+        films.add(Film("Фильм 8", "Россия", "5", "Боевик", R.drawable.img1))
+        films.add(Film("Фильм 9", "Россия", "5", "Драма", R.drawable.img1))
+        films.add(Film("Фильм 10", "Россия", "5", "Комедия", R.drawable.img1))
+        films.add(Film("Фильм 11", "Россия", "5", "Драма", R.drawable.img1))
+        films.add(Film("Фильм 12", "Россия", "5", "Комедия", R.drawable.img1))
+        films.add(Film("Фильм 13", "Россия", "5", "Комедия", R.drawable.img1))
+        films.add(Film("Фильм 14", "Россия", "5", "Трагикомедия", R.drawable.img1))
+        films.add(Film("Фильм 15", "Россия", "5", "Комедия", R.drawable.img1))
+        films.add(Film("Фильм 16", "Россия", "5", "Комедия", R.drawable.img1))
+
+        var filterFilm = films.filter { s -> s.genre == "Комедия" }
+
         val intent = Intent(this, MovieActivity::class.java)
         intent.putExtra("name", movieName)
         intent.putExtra("country", countryName)

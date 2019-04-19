@@ -12,6 +12,12 @@ interface ItemClick {
     fun onItemClick(pos: Int)
 }
 
+data class Film (val name: String,
+                 val country: String,
+                 val rating: String,
+                 val genre: String,
+                 val image: Int)
+
 class MoviesAdapter(private val movieNames : ArrayList<String>,
                     private val movieCountries: ArrayList<String>,
                     private val movieRatings: ArrayList<String>,
