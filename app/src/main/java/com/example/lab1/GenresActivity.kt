@@ -12,7 +12,6 @@ class GenresActivity : AppCompatActivity(), ItemClick {
 
     override fun onItemClick(pos: Int) {
         val genreName = movieGenres[pos]
-
         val intent = Intent(this, MovieListActivity::class.java)
         intent.putExtra("genre", genreName)
         startActivity(intent)
@@ -25,14 +24,14 @@ class GenresActivity : AppCompatActivity(), ItemClick {
         setContentView(R.layout.activity_genres)
         addGenres()
         genresRecyclerView.layoutManager = LinearLayoutManager(this)
-        genresRecyclerView.adapter = GenresAdapter(movieGenres, this)
+        genresRecyclerView.adapter = GenresAdapter(movieGenres, this, this)
 
     }
 
     fun addGenres() {
-        movieGenres.add("Жанр 1")
-        movieGenres.add("Жанр 2")
-        movieGenres.add("Жанр 3")
-        movieGenres.add("Жанр 4")
+        movieGenres.add("Комедия")
+        movieGenres.add("Трагикомедия")
+        movieGenres.add("Драма")
+        movieGenres.add("Боевик")
     }
 }

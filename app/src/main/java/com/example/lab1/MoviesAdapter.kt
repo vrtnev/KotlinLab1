@@ -18,19 +18,15 @@ data class Film (val name: String,
                  val genre: String,
                  val image: Int)
 
-class MoviesAdapter(private val movieNames : ArrayList<String>,
-                    private val movieCountries: ArrayList<String>,
-                    private val movieRatings: ArrayList<String>,
-                    private val movieImages: ArrayList<Int>,
-                    private val movieGenres: ArrayList<String>,
+class MoviesAdapter(private val films: ArrayList<Film>,
                     private val context: Context,
                     val onItemClick: ItemClick) : RecyclerView.Adapter<MoviesAdapter.ViewHolder>(){
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvMovieName.text = movieNames[position]
-        holder.tvCountryName.text = movieCountries[position]
-        holder.tvRating.text = movieRatings[position]
-        holder.imImage.setImageResource(movieImages[position])
+        holder.tvMovieName.text = films[position].name
+        holder.tvCountryName.text = films[position].country
+        holder.tvRating.text = films[position].rating
+        holder.imImage.setImageResource(films[position].image)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -38,7 +34,7 @@ class MoviesAdapter(private val movieNames : ArrayList<String>,
     }
 
     override fun getItemCount(): Int {
-        return movieNames.size
+        return films.size
     }
 
     class ViewHolder (view: View, val onItemClick: ItemClick) : RecyclerView.ViewHolder(view), View.OnClickListener {

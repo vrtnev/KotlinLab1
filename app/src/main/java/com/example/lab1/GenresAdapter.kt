@@ -8,22 +8,33 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.recyclerview_genre_row.view.*
 
 class GenresAdapter(private val movieGenres : ArrayList<String>,
-                    private val context: Context) : RecyclerView.Adapter<GenresAdapter.ViewHolder>() {
+                    private val context: Context,
+                     val onItemClick: ItemClick) : RecyclerView.Adapter<GenresAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tvGenreName.text = movieGenres[position]
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.recyclerview_genre_row, parent,false))
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.recyclerview_genre_row, parent,false),onItemClick)
     }
 
     override fun getItemCount(): Int {
         return movieGenres.size
     }
 
-    class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder (view: View, val onItemClick: ItemClick) : RecyclerView.ViewHolder(view), View.OnClickListener {
         val tvGenreName = view.btnGenre!!
+
+        init {
+           // val tvGenreName = view.btnGenre!!
+            tvGenreName.setOnClickListener(this)
+        }
+
+        override fun onClick(p0: View?) {
+            onItemClick.onItemClick(adapterPosition)
+        }
+
     }
 
 }
