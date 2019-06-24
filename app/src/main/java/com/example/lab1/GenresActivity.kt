@@ -29,9 +29,9 @@ class GenresActivity : AppCompatActivity(), ItemClick {
     }
 
     fun addGenres() {
-        movieGenres.add("Комедия")
-        movieGenres.add("Трагикомедия")
-        movieGenres.add("Драма")
-        movieGenres.add("Боевик")
+        movieGenres.add("Стэн Ли")
+        movieGenres.add("Стив Дитко")
+        movieGenres.add("Мартин Гудмен")
+        movieGenres.add("Марк Миллар")
     }
 }
