@@ -8,7 +8,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.*
 import kotlinx.android.synthetic.main.activity_movie_list.*
 
-class MovieListActivity : AppCompatActivity(), ItemClick {
+class ComixListActivity : AppCompatActivity(), ItemClick {
 
     override fun onItemClick(pos: Int) {
         val movieName = films[pos].name
@@ -17,7 +17,7 @@ class MovieListActivity : AppCompatActivity(), ItemClick {
         val image = films[pos].image
         val genre = films[pos].genre
 
-        val intent = Intent(this, MovieActivity::class.java)
+        val intent = Intent(this, ComixActivity::class.java)
         intent.putExtra("name", movieName)
         intent.putExtra("country", countryName)
         intent.putExtra("rating", rating)
@@ -40,11 +40,11 @@ class MovieListActivity : AppCompatActivity(), ItemClick {
                 override fun onNavigationItemSelected(item: MenuItem): Boolean {
                     when (item.itemId) {
                         R.id.about -> {
-                            val intent = Intent(this@MovieListActivity, AboutActivity::class.java)
+                            val intent = Intent(this@ComixListActivity, AboutActivity::class.java)
                             startActivity(intent)
                         }
                         R.id.genre -> {
-                            val intent = Intent(this@MovieListActivity, AuthorsActivity::class.java)
+                            val intent = Intent(this@ComixListActivity, AuthorsActivity::class.java)
                             startActivity(intent)
                         }
 //                        R.id.favorite -> {

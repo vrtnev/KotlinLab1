@@ -3,7 +3,6 @@ package com.example.lab1
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import android.widget.Toast
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         )
         val password = inpText.text.toString()
         if (password == "admin") {
-            val intent = Intent(this, MovieListActivity::class.java)
+            val intent = Intent(this, ComixListActivity::class.java)
             startActivity(intent)
         } else
             wrongPasswordToast.show()

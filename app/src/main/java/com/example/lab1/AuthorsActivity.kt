@@ -10,7 +10,7 @@ class AuthorsActivity : AppCompatActivity(), ItemClick {
 
     override fun onItemClick(pos: Int) {
         val genreName = movieGenres[pos]
-        val intent = Intent(this, MovieListActivity::class.java)
+        val intent = Intent(this, ComixListActivity::class.java)
         intent.putExtra("genre", genreName)
         startActivity(intent)
     }

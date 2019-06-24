@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import kotlinx.android.synthetic.main.activity_movie.*
 
-class MovieActivity : AppCompatActivity() {
+class ComixActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
