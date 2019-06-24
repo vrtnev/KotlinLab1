@@ -1,7 +1,6 @@
 package com.example.lab1
 
 import android.content.Context
-import android.media.Image
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -20,7 +19,8 @@ data class Film (val name: String,
 
 class MoviesAdapter(private val films: ArrayList<Film>,
                     private val context: Context,
-                    val onItemClick: ItemClick) : RecyclerView.Adapter<MoviesAdapter.ViewHolder>(){
+                    val onItemClick: ComixListActivity
+) : RecyclerView.Adapter<MoviesAdapter.ViewHolder>(){
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tvMovieName.text = films[position].name

@@ -47,10 +47,7 @@ class ComixListActivity : AppCompatActivity(), ItemClick {
                             val intent = Intent(this@ComixListActivity, AuthorsActivity::class.java)
                             startActivity(intent)
                         }
-//                        R.id.favorite -> {
-//                            finish()
-//                        }
-                        R.id.logout -> {
+                        R.id.favorite -> {
                             finish()
                         }
                     }
