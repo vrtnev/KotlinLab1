@@ -15,7 +15,8 @@ data class Film (val name: String,
                  val country: String,
                  val rating: String,
                  val genre: String,
-                 val image: Int)
+                 val image: Int,
+                 val inFavorite: Boolean)
 
 class MoviesAdapter(private val films: ArrayList<Film>,
                     private val context: Context,
@@ -27,6 +28,10 @@ class MoviesAdapter(private val films: ArrayList<Film>,
         //holder.tvCountryName.text = films[position].country
         holder.tvRating.text = films[position].rating
         holder.imImage.setImageResource(films[position].image)
+        if (films[position].inFavorite)
+            holder.isInFav.text = "Удалить из избранного"
+        else
+            holder.isInFav.text = "Добавить в избранное"
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -42,6 +47,7 @@ class MoviesAdapter(private val films: ArrayList<Film>,
         //val tvCountryName = view.countryName!!
         val tvRating = view.rating!!
         val imImage = view.imageView!!
+        val isInFav = view.buttonFavorite!!
 
         init {
             view.setOnClickListener(this)
