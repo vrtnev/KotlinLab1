@@ -28,11 +28,11 @@ class MainActivity : AppCompatActivity() {
             "Введён неверный пароль", Toast.LENGTH_SHORT
         )
         val password = inpText.text.toString()
-        if (password == "password") {
+        if (password == "admin") {
             val intent = Intent(this, MovieListActivity::class.java)
             startActivity(intent)
         } else
-            wrongPasswordToast.show();
+            wrongPasswordToast.show()
     }
 
 }
