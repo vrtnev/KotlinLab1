@@ -7,7 +7,7 @@
     />
     <item
             android:id="@+id/genre"
-            android:title="Жанры"
+            android:title="Создатели комиксов"
             app:showAsAction="withText"
     />
     <item
