@@ -24,7 +24,7 @@ class MoviesAdapter(private val films: ArrayList<Film>,
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tvMovieName.text = films[position].name
-        holder.tvCountryName.text = films[position].country
+        //holder.tvCountryName.text = films[position].country
         holder.tvRating.text = films[position].rating
         holder.imImage.setImageResource(films[position].image)
     }
@@ -39,7 +39,7 @@ class MoviesAdapter(private val films: ArrayList<Film>,
 
     class ViewHolder (view: View, val onItemClick: ItemClick) : RecyclerView.ViewHolder(view), View.OnClickListener {
         val tvMovieName = view.movieName!!
-        val tvCountryName = view.countryName!!
+        //val tvCountryName = view.countryName!!
         val tvRating = view.rating!!
         val imImage = view.imageView!!
 

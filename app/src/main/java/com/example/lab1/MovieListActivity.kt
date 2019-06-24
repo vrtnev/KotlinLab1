@@ -54,22 +54,22 @@ class MovieListActivity : AppCompatActivity(), ItemClick {
     }
 
     fun addMovies() {
-        films.add(Film("Фильм 1", "Россия", "5", "Комедия", R.drawable.img1))
-        films.add(Film("Фильм 2", "Австралия", "5", "Комедия", R.drawable.img2))
-        films.add(Film("Фильм 3", "Иран", "5", "Трагикомедия", R.drawable.img3))
-        films.add(Film("Фильм 4", "США", "5", "Комедия", R.drawable.img4))
-        films.add(Film("Фильм 5", "Канада", "5", "Драма", R.drawable.img5))
-        films.add(Film("Фильм 6", "Россия", "5", "Комедия", R.drawable.img6))
-        films.add(Film("Фильм 7", "Россия", "4", "Боевик", R.drawable.img7))
-        films.add(Film("Фильм 8", "Россия", "5", "Боевик", R.drawable.img8))
-        films.add(Film("Фильм 9", "Россия", "5", "Драма", R.drawable.img9))
-        films.add(Film("Фильм 10", "Россия", "5", "Комедия", R.drawable.img10))
-        films.add(Film("Фильм 11", "Россия", "5", "Драма", R.drawable.img11))
-        films.add(Film("Фильм 12", "Россия", "5", "Комедия", R.drawable.img12))
-        films.add(Film("Фильм 13", "Россия", "5", "Комедия", R.drawable.img13))
-        films.add(Film("Фильм 14", "Россия", "5", "Трагикомедия", R.drawable.img14))
-        films.add(Film("Фильм 15", "Россия", "5", "Комедия", R.drawable.img15))
-        films.add(Film("Фильм 16", "Россия", "5", "Комедия", R.drawable.img16))
+        films.add(Film("Капитан Марвел", "Россия", "5", "Комедия", R.drawable.img1))
+        films.add(Film("Люди икс. Гражданская война", "Австралия", "5", "Комедия", R.drawable.img2))
+        films.add(Film("Железный человек", "Иран", "5", "Трагикомедия", R.drawable.img3))
+        films.add(Film("Каратель", "США", "5", "Комедия", R.drawable.img4))
+        films.add(Film("Америка", "Канада", "5", "Драма", R.drawable.img5))
+        films.add(Film("Исповедь", "Россия", "5", "Комедия", R.drawable.img6))
+        films.add(Film("Захватчики", "Россия", "4", "Боевик", R.drawable.img7))
+        films.add(Film("Макс Пейн", "Россия", "5", "Боевик", R.drawable.img8))
+        films.add(Film("Новые Воины", "Россия", "5", "Драма", R.drawable.img9))
+        films.add(Film("Стражи 3000", "Россия", "5", "Комедия", R.drawable.img10))
+        films.add(Film("Чёрная Пантера", "Россия", "5", "Драма", R.drawable.img11))
+        films.add(Film("Щит", "Россия", "5", "Комедия", R.drawable.img12))
+        films.add(Film("Электра", "Россия", "5", "Комедия", R.drawable.img13))
+        films.add(Film("Червяк Джим", "Россия", "5", "Трагикомедия", R.drawable.img14))
+        films.add(Film("Тор", "Россия", "5", "Комедия", R.drawable.img15))
+        films.add(Film("Утка Говард", "Россия", "5", "Комедия", R.drawable.img16))
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
