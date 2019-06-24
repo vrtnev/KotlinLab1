@@ -1,17 +1,11 @@
 package com.example.lab1
 
 import android.content.Intent
-import android.media.Image
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.annotation.NonNull
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.*
-import android.widget.TextView
-import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_movie_list.*
 
 class MovieListActivity : AppCompatActivity(), ItemClick {
@@ -50,9 +44,12 @@ class MovieListActivity : AppCompatActivity(), ItemClick {
                             startActivity(intent)
                         }
                         R.id.genre -> {
-                            val intent = Intent(this@MovieListActivity, GenresActivity::class.java)
+                            val intent = Intent(this@MovieListActivity, AuthorsActivity::class.java)
                             startActivity(intent)
                         }
+//                        R.id.favorite -> {
+//                            finish()
+//                        }
                         R.id.logout -> {
                             finish()
                         }
@@ -74,7 +71,7 @@ class MovieListActivity : AppCompatActivity(), ItemClick {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         var inflater = menuInflater
-        inflater.inflate(R.menu.menu_main, menu)
+        inflater.inflate(R.menu.menu_top, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -122,7 +119,7 @@ class MovieListActivity : AppCompatActivity(), ItemClick {
     }
 
     fun genres() {
-        val intent = Intent(this, GenresActivity::class.java)
+        val intent = Intent(this, AuthorsActivity::class.java)
         startActivity(intent)
     }
 

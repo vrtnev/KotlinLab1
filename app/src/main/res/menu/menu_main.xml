@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+            android:id="@+id/genre"
+            android:title="Создатели"
+            app:showAsAction="withText"
+    />
+    <item
+            android:id="@+id/favorite"
+            android:title="Избранное"
+            app:showAsAction="withText"
+    />
+    <item
             android:id="@+id/about"
             android:title="О приложении"
-            app:showAsAction="withText"
-    />
-    <item
-            android:id="@+id/genre"
-            android:title="Создатели комиксов"
-            app:showAsAction="withText"
-    />
-    <item
-            android:id="@+id/logout"
-            android:title="Выход"
             app:showAsAction="withText"
     />
 </menu>

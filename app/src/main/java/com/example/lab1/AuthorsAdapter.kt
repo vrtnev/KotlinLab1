@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.recyclerview_genre_row.view.*
 
-class GenresAdapter(private val movieGenres : ArrayList<String>,
-                    private val context: Context,
-                     val onItemClick: ItemClick) : RecyclerView.Adapter<GenresAdapter.ViewHolder>() {
+class AuthorsAdapter(private val movieGenres : ArrayList<String>,
+                     private val context: Context,
+                     val onItemClick: ItemClick) : RecyclerView.Adapter<AuthorsAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tvGenreName.text = movieGenres[position]

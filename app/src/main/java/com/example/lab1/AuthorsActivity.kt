@@ -5,10 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_genres.*
-import kotlinx.android.synthetic.main.activity_movie.*
-import kotlinx.android.synthetic.main.activity_movie_list.*
 
-class GenresActivity : AppCompatActivity(), ItemClick {
+class AuthorsActivity : AppCompatActivity(), ItemClick {
 
     override fun onItemClick(pos: Int) {
         val genreName = movieGenres[pos]
@@ -24,7 +22,7 @@ class GenresActivity : AppCompatActivity(), ItemClick {
         setContentView(R.layout.activity_genres)
         addGenres()
         genresRecyclerView.layoutManager = LinearLayoutManager(this)
-        genresRecyclerView.adapter = GenresAdapter(movieGenres, this, this)
+        genresRecyclerView.adapter = AuthorsAdapter(movieGenres, this, this)
 
     }
 
